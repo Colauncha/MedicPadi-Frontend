@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="h-8 w-8 rounded-lg bg-gradient-hero flex items-center justify-center">
                 <Heart className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">MediConnect</span>
+              <span className="text-xl font-bold">MedicPadi</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Making quality healthcare accessible to everyone, everywhere.
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 MediConnect. All rights reserved.</p>
+          <p>© 2024 MedicPadi. All rights reserved.</p>
         </div>
       </div>
     </footer>
