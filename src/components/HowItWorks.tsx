@@ -5,33 +5,33 @@ const steps = [
   {
     icon: UserPlus,
     title: "Create Your Account",
-    description: "Quick and easy sign-up process. Add your medical history and preferences in minutes.",
+    description: "Quick and easy sign-up process. Add your medical history, preferences, and consent settings for secure Electronic Health Records (EHR) management.",
     step: "01",
   },
   {
     icon: Video,
     title: "Book a Consultation",
-    description: "Choose from available doctors and schedule a video consultation at your convenience.",
+    description: "Choose from licensed, verified healthcare professionals and schedule a video consultation at your convenience. Available 24/7 for your healthcare needs.",
     step: "02",
   },
   {
     icon: FileText,
-    title: "Get Your Prescription",
-    description: "Receive your diagnosis and prescription digitally. Order medication directly through our platform.",
+    title: "Get Your Prescription & Care",
+    description: "Receive your diagnosis and digital prescription. Compare prices across verified pharmacies and get medications delivered to your doorstep. Access your records offline anytime.",
     step: "03",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section id="how-it-works" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground">
-            Getting quality healthcare has never been easier. Follow these simple steps to connect with a doctor.
+            Getting quality healthcare has never been easier. Follow these simple steps to connect with healthcare professionals and access comprehensive medical services.
           </p>
         </div>
         
