@@ -1,4 +1,7 @@
-import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/medicpadi-logo.png";
+
+const WAITLIST_URL = "https://medicpadi.com/waitlist";
 
 const Footer = () => {
   return (
@@ -7,12 +10,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-gradient-hero flex items-center justify-center">
-                <Heart className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold">MedicPadi</span>
-            </div>
+            <Link to="/" className="inline-block">
+              <img src={logo} alt="MedicPadi logo" className="h-8 w-auto" />
+            </Link>
             <p className="text-sm text-muted-foreground">
               Making quality healthcare accessible to everyone, everywhere.
             </p>
@@ -22,10 +22,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="hover:text-primary cursor-pointer transition-colors">Video Consultation</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">E-Prescriptions</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">Medical Records</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">Health Monitoring</li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Video Consultation</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">E-Prescriptions</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Medical Records</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Health Monitoring</Link></li>
             </ul>
           </div>
           
@@ -33,10 +33,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="hover:text-primary cursor-pointer transition-colors">About Us</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">Careers</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">Press</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">Contact</li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Join Waitlist</a></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
           
@@ -44,10 +43,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="hover:text-primary cursor-pointer transition-colors">Privacy Policy</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">Terms of Service</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">HIPAA Compliance</li>
-              <li className="hover:text-primary cursor-pointer transition-colors">Cookie Policy</li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">HIPAA Compliance</Link></li>
             </ul>
           </div>
         </div>
