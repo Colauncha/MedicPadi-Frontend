@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Video, Clock, DollarSign } from "lucide-react";
 import heroImage from "@/assets/hero-doctor.jpg";
 
+const WAITLIST_URL = "https://medicpadi.com/waitlist";
+
 const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-hero opacity-5 z-0" />
       
       <div className="container mx-auto px-4 py-16 md:py-24 z-10">
@@ -30,12 +31,14 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button variant="hero" size="lg" className="group">
-                Start Consultation
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button variant="hero" size="lg" className="group" asChild>
+                <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
+                  Join the Waitlist
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                How It Works
+              <Button variant="outline" size="lg" asChild>
+                <a href="/#how-it-works">How It Works</a>
               </Button>
             </div>
             

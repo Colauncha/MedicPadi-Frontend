@@ -114,11 +114,13 @@ const Services = () => {
                 Join thousands of patients who have already transformed their healthcare experience with Medicpadi.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="hero">
-                  Get Started Now
+                <Button size="lg" variant="hero" asChild>
+                  <a href="https://medicpadi.com/waitlist" target="_blank" rel="noopener noreferrer">
+                    Join the Waitlist
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline">
-                  Learn More
+                <Button size="lg" variant="outline" asChild>
+                  <a href="/contact">Contact Us</a>
                 </Button>
               </div>
             </div>

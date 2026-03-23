@@ -1,8 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Construction, ArrowLeft, Home } from "lucide-react";
+import { Construction, ArrowLeft, Home, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const WAITLIST_URL = "https://medicpadi.com/waitlist";
 
 const UnderConstruction = () => {
   return (
@@ -25,36 +27,26 @@ const UnderConstruction = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              We're working hard to bring you this feature. Check back soon for updates!
+              We're working hard to bring you this feature. Join our waitlist to be the first to know when we launch!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="hero" asChild>
+                <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-5 w-5 mr-2" />
+                  Join the Waitlist
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
                 <Link to="/">
                   <Home className="h-5 w-5 mr-2" />
                   Go to Homepage
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" onClick={() => window.history.back()}>
+              <Button size="lg" variant="ghost" onClick={() => window.history.back()}>
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 Go Back
               </Button>
-            </div>
-            
-            {/* Feature highlights */}
-            <div className="mt-16 grid sm:grid-cols-3 gap-6">
-              <div className="p-6 rounded-xl bg-muted/30 border border-border">
-                <p className="text-sm font-medium text-muted-foreground mb-2">Stay Updated</p>
-                <p className="font-semibold">Follow our progress</p>
-              </div>
-              <div className="p-6 rounded-xl bg-muted/30 border border-border">
-                <p className="text-sm font-medium text-muted-foreground mb-2">Coming Soon</p>
-                <p className="font-semibold">Exciting features ahead</p>
-              </div>
-              <div className="p-6 rounded-xl bg-muted/30 border border-border">
-                <p className="text-sm font-medium text-muted-foreground mb-2">Need Help?</p>
-                <p className="font-semibold">Contact support</p>
-              </div>
             </div>
           </div>
         </div>
